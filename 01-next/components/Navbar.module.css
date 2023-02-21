@@ -1,0 +1,8 @@
+.generic {
+  margin: 10px;
+  border: 1px solid rgba(128, 128, 128, 0.391);
+}
+
+.selected {
+  background-color: rgba(93, 93, 233, 0.335);
+}
