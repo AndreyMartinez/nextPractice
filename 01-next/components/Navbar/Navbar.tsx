@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router'
 import styles from './Navbar.module.css';
 
-const navbarNavigator = [
+const navbarNavigator: Array<{ url: string, name: string }> = [
   {
     url: '/',
     name: 'Home'
@@ -14,19 +14,20 @@ const navbarNavigator = [
   },
   {
     url: '/login/register',
-    name: 'Home'
+    name: 'Register'
   }
 ]
 
 const Navbar = () => {
   const router = useRouter();
-  const validateClassSelected = (nav) => (router.asPath === nav ? styles.selected : '')
-
+  const validateClassSelected = (nav:string) => (router.asPath === nav ? styles.selected : '')
   return (
     <nav>
-      {navbarNavigator.map({ url, name }).forEach(() => {
+      {
+      navbarNavigator.map(({ url, name }) => (
         <Link href={url} className={`${styles.generic} ${validateClassSelected(url)}`}>{name}</Link>
-      })}
+      ))
+      }
     </nav>
   )
 }

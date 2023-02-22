@@ -1,14 +1,20 @@
-import React from 'react';
+import React, {FC, ReactNode} from 'react';
 import Navbar  from '../Navbar/Navbar';
 import Head from 'next/head';
 
-const MainLayout = ({ children, titleHead }) => (
+type MainLayoutType = {
+  children: ReactNode,
+  titleHead:string
+}
+const MainLayout:FC<MainLayoutType> = ({ children, titleHead }) => (
   <>
     <Head>
       <title>{titleHead}</title>
     </Head>
-    <Navbar />
     <main>
+      <div>
+        <Navbar />
+      </div>
       {children}
     </main>
   </>
