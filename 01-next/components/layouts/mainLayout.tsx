@@ -2,11 +2,11 @@ import React, {FC, ReactNode} from 'react';
 import Navbar  from '../Navbar/Navbar';
 import Head from 'next/head';
 
-type MainLayoutType = {
+interface Props {
   children: ReactNode,
   titleHead:string
 }
-const MainLayout:FC<MainLayoutType> = ({ children, titleHead }) => (
+const MainLayout:FC<Props> = ({ children, titleHead }) => (
   <>
     <Head>
       <title>{titleHead}</title>
