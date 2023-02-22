@@ -1,15 +1,10 @@
-import Head from 'next/head';
-import Navbar from '../components/Navbar';
+import MainLayout from '../components/layouts/mainLayout';
 
 function HomePage() {
   return (
-    <>
-      <Head>
-        <title>Hello Rapha</title>
-      </Head>
-      <Navbar actualPage="home" />
-      <div>Welcome to Next.js!</div>
-    </>
+    <MainLayout titleHead="HomePage">
+     <h1>Home Page</h1>
+     </MainLayout>
   )
 }
 
