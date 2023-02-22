@@ -3,16 +3,30 @@ import Link from 'next/link';
 import { useRouter } from 'next/router'
 import styles from './Navbar.module.css';
 
+const navbarNavigator = [
+  {
+    url: '/',
+    name: 'Home'
+  },
+  {
+    url: '/login/auth',
+    name: 'Login'
+  },
+  {
+    url: '/login/register',
+    name: 'Home'
+  }
+]
+
 const Navbar = () => {
   const router = useRouter();
-  console.log(router)
   const validateClassSelected = (nav) => (router.asPath === nav ? styles.selected : '')
 
   return (
     <nav>
-      <Link href="/" className={`${styles.generic} ${validateClassSelected('/')}`}>Home</Link>
-      <Link href="/login/auth" className={`${styles.generic} ${validateClassSelected('/login/auth')}`}>Login</Link>
-      <Link href="/login/register" className={`${styles.generic} ${validateClassSelected('/login/register')}`}>Register</Link>
+      {navbarNavigator.map({ url, name }).forEach(() => {
+        <Link href={url} className={`${styles.generic} ${validateClassSelected(url)}`}>{name}</Link>
+      })}
     </nav>
   )
 }
