@@ -25,7 +25,7 @@ const Navbar = () => {
     <nav>
       {
       navbarNavigator.map(({ url, name }) => (
-        <Link href={url} className={`${styles.generic} ${validateClassSelected(url)}`}>{name}</Link>
+        <Link key={url} href={url} className={`${styles.generic} ${validateClassSelected(url)}`}>{name}</Link>
       ))
       }
     </nav>
