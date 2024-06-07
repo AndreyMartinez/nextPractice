@@ -31,9 +31,9 @@ Nacen dos carpetas muy importantes en el proyecto
 >>Pages
 >> Public
 
-**pages:** Asociado a una ruta en función de su nombre de archivo. Por ejemplo, pages/about.jsse asigna a/about.
+**pages:** Asociado a una ruta en función de su nombre de archivo. Por ejemplo, pages/about.js se asigna a /about.
 
-**public:** lmacena activos estáticos como imágenes, fuentes, etc. Los archivos dentro publicdel directorio pueden ser referenciados por su código a partir de la URL base ( /).
+**public:** Almacena activos estáticos como imágenes, fuentes, etc. Los archivos dentro public del directorio pueden ser referenciados por su código a partir de la URL base ( /).
 
 5. Solo por ultimo queda correr nuestro proyecto
 

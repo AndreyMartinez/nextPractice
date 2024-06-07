@@ -1,7 +1,7 @@
 # Pagina
-En Next.js, una página es un componente de React exportado desde un .jsarchivo , .jsx, .tso .tsxen el pagesdirectorio. Cada página está asociada con una ruta basada en su nombre de archivo.
+En Next.js, una página es un componente de React exportado desde un .jsarchivo , .jsx, .tso .tsx en el pages directorio. Cada página está asociada con una ruta basada en su nombre de archivo.
 
-Ejemplo : si crea pages/about.jsque exporta un componente React como el que se muestra a continuación, estará accesible en /about.
+Ejemplo : si crea pages/about.js que exporta un componente React como el que se muestra a continuación, estará accesible en /about.
 
 ####Páginas con rutas dinámicas
 Next.js admite páginas con rutas dinámicas. Por ejemplo, si crea un archivo llamado pages/posts/[id].js, será accesible en posts/1, posts/2, etc.
